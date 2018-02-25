@@ -1,0 +1,446 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+}
+html *, body * {
+  font-family: "Playfair Display", "微軟正黑體";
+  box-sizing: border-box;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+input[type='checkbox']:checked + #demo {
+  background-position: 0 100%;
+}
+input[type='checkbox']:checked + #demo label {
+  background-color: #E5E6EA;
+}
+input[type='checkbox']:checked + #demo label .switch-button {
+  transform: translate(calc(100% - 2px), -50%);
+  background-color: #969594;
+}
+input[type='checkbox']:checked + #demo h1, input[type='checkbox']:checked + #demo h4 {
+  color: #333;
+}
+input[type='checkbox']:checked + #demo .moon {
+  top: -100%;
+  opacity: 0;
+}
+input[type='checkbox']:checked + #demo .sun {
+  top: 50px;
+  opacity: 1;
+}
+input[type='checkbox']:checked + #demo .all-stars {
+  opacity: 0;
+}
+input[type='checkbox']:checked + #demo .buildings {
+  filter: brightness(100%);
+}
+
+#demo {
+  width: 700px;
+  height: 500px;
+  position: relative;
+  border: 1px solid;
+  background: linear-gradient(#1D2B49, #1A45A0, #91cdff, #fff);
+  background-size: 100% 300%;
+  background-position: 0 0;
+  overflow: hidden;
+  transition: 2s;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+#demo h1, #demo h4, #demo .all-stars, #demo .moon, #demo .sun, #demo .buildings {
+  transition: 2s;
+}
+#demo label, #demo .switch-button {
+  transition: 1s;
+}
+#demo label {
+  width: 40px;
+  height: 22px;
+  display: inline-block;
+  position: absolute;
+  background-color: #949AAB;
+  border-radius: 20px;
+  border: 1px solid #969594;
+  cursor: pointer;
+  top: 50px;
+  right: 30px;
+}
+#demo label .switch-button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #D7DAE0;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#demo h1 {
+  text-align: right;
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  letter-spacing: 0.2em;
+  color: #fff;
+  opacity: 0.8;
+}
+#demo h4 {
+  text-align: right;
+  position: absolute;
+  right: 20px;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+#demo h4 {
+  top: 200px;
+  opacity: 0.6;
+}
+#demo .moon, #demo .sun {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 240px;
+  border-radius: 50%;
+}
+#demo .moon {
+  top: 50px;
+  box-shadow: -10px -10px rgba(255, 255, 255, 0.9) inset;
+  opacity: 1;
+}
+#demo .sun {
+  top: 100%;
+  background-color: #ffdd38;
+  box-shadow: 0 0 10px #ffdd38;
+  opacity: 0;
+}
+#demo .all-stars {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#demo [class^="star"] {
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  background-color: #fff;
+  opacity: 0.9;
+  border-radius: 50%;
+  animation: twinkling 2s infinite;
+}
+#demo .star1 {
+  top: 46%;
+  left: 21%;
+  animation-delay: -0.4s;
+}
+#demo .star2 {
+  top: 17%;
+  left: 13%;
+  animation-delay: -0.8s;
+}
+#demo .star3 {
+  top: 29%;
+  left: 16%;
+  animation-delay: -1.2s;
+}
+#demo .star4 {
+  top: 18%;
+  left: 75%;
+  animation-delay: -1.6s;
+}
+#demo .star5 {
+  top: 56%;
+  left: 35%;
+  animation-delay: -2s;
+}
+#demo .star6 {
+  top: 30%;
+  left: 89%;
+  animation-delay: -2.4s;
+}
+#demo .star7 {
+  top: 2%;
+  left: 17%;
+  animation-delay: -2.8s;
+}
+#demo .star8 {
+  top: 2%;
+  left: 51%;
+  animation-delay: -3.2s;
+}
+#demo .star9 {
+  top: 47%;
+  left: 78%;
+  animation-delay: -3.6s;
+}
+#demo .star10 {
+  top: 70%;
+  left: 43%;
+  animation-delay: -4s;
+}
+#demo .star11 {
+  top: 25%;
+  left: 37%;
+  animation-delay: -4.4s;
+}
+#demo .star12 {
+  top: 68%;
+  left: 44%;
+  animation-delay: -4.8s;
+}
+#demo .star13 {
+  top: 42%;
+  left: 2%;
+  animation-delay: -5.2s;
+}
+#demo .star14 {
+  top: 6%;
+  left: 2%;
+  animation-delay: -5.6s;
+}
+#demo .star15 {
+  top: 23%;
+  left: 84%;
+  animation-delay: -6s;
+}
+#demo .star16 {
+  top: 53%;
+  left: 46%;
+  animation-delay: -6.4s;
+}
+#demo .star17 {
+  top: 34%;
+  left: 70%;
+  animation-delay: -6.8s;
+}
+#demo .star18 {
+  top: 30%;
+  left: 37%;
+  animation-delay: -7.2s;
+}
+#demo .star19 {
+  top: 54%;
+  left: 13%;
+  animation-delay: -7.6s;
+}
+#demo .star20 {
+  top: 40%;
+  left: 16%;
+  animation-delay: -8s;
+}
+#demo .star21 {
+  top: 17%;
+  left: 68%;
+  animation-delay: -8.4s;
+}
+#demo .star22 {
+  top: 17%;
+  left: 10%;
+  animation-delay: -8.8s;
+}
+#demo .star23 {
+  top: 3%;
+  left: 52%;
+  animation-delay: -9.2s;
+}
+#demo .star24 {
+  top: 22%;
+  left: 55%;
+  animation-delay: -9.6s;
+}
+#demo .star25 {
+  top: 40%;
+  left: 34%;
+  animation-delay: -10s;
+}
+#demo .star26 {
+  top: 44%;
+  left: 97%;
+  animation-delay: -10.4s;
+}
+#demo .star27 {
+  top: 29%;
+  left: 98%;
+  animation-delay: -10.8s;
+}
+#demo .star28 {
+  top: 5%;
+  left: 62%;
+  animation-delay: -11.2s;
+}
+#demo .star29 {
+  top: 56%;
+  left: 1%;
+  animation-delay: -11.6s;
+}
+#demo .star30 {
+  top: 44%;
+  left: 17%;
+  animation-delay: -12s;
+}
+@keyframes twinkling {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+#demo .buildings {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  filter: brightness(90%);
+}
+#demo .buildings .ground {
+  width: 360px;
+  height: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  z-index: 1;
+  background-color: #e0d2c4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#demo .buildings .building1 {
+  width: 340px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  z-index: 1;
+}
+#demo .buildings .building1 .wall1 {
+  width: 70px;
+  height: 100%;
+  background-color: #e3e2cf;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+#demo .buildings .building1 .wall2 {
+  width: 270px;
+  height: 100%;
+  background-color: #fafaf5;
+  position: absolute;
+  left: 70px;
+  bottom: 0;
+}
+#demo .buildings .building1 .wall2 .windows {
+  width: 270px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  right: 0;
+}
+#demo .buildings .building1 .wall2 .windows .window {
+  width: 20px;
+  height: 30px;
+  background-color: #534d4d;
+  box-shadow: -5px 3px #7cb1ff inset;
+}
+#demo .buildings .building1 .wall1:before, #demo .buildings .building1 .wall2:before {
+  content: "";
+  display: block;
+  width: 103%;
+  height: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: inherit;
+  top: -20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#demo .buildings .building2 {
+  width: 270px;
+  height: 130px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 140px;
+  z-index: 1;
+}
+#demo .buildings .building2 .wall1 {
+  width: 60px;
+  height: 100%;
+  position: absolute;
+  background-color: #e3e2cf;
+}
+#demo .buildings .building2 .wall2 {
+  width: 210px;
+  height: 100%;
+  position: absolute;
+  left: 60px;
+  background-color: #fafaf5;
+}
+#demo .buildings .building2 .wall2 .doors {
+  width: 210px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  position: absolute;
+  right: 0;
+}
+#demo .buildings .building2 .wall2 .doors .door {
+  width: 50px;
+  height: 90px;
+  background-color: #534d4d;
+  border-radius: 30px 30px 0 0;
+  box-shadow: -8px 3px #7cb1ff inset;
+}
+#demo .buildings .building2 .wall1:before, #demo .buildings .building2 .wall2:before {
+  content: "";
+  display: block;
+  width: 103%;
+  height: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: inherit;
+  top: -20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#demo .buildings .roof {
+  width: 250px;
+  height: 125px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 290px;
+  border-radius: 125px 125px 0 0;
+  z-index: 1;
+  background: linear-gradient(-100deg, #6fc5ff, #0058ff);
+}
+#demo .buildings .roof .rooftop {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 30px solid rgba(255, 255, 255, 0.9);
+  bottom: 125px;
+}
